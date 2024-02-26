@@ -16,10 +16,7 @@
       <span>{{character.power}} </span>
     </div>
 
-    <!-- <span>Es par: {{ isEven}} </span>
-      <span>Es impar:  {{ isOdd }}</span> -->
-
-    <button (click)="onDeleteCharacter(i)" class="btn btn-danger">X</button>
+    <button (click)="onDeleteCharacter(character.id)" class="btn btn-danger">X</button>
 
   </li>
 </ul>

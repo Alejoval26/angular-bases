@@ -4,11 +4,11 @@
 <div class="row">
   <div class="col">
     <!-- el dbz-list requiere una lista de caracteres que mainpage le va a mandar a traves de la lista llamada "characters" . A su vez emite el id que se va a borrar y el metodo del mainpage onDeleteCharacter recibe el evento ($event) que seria el emitter de onDelete (el id) -->
-    <dbz-list [characterlist]="dbzService.characters" (onDelete)="dbzService.onDeleteCharacter($event)"></dbz-list>
+    <dbz-list [characterlist]="characters" (onDelete)="onDeleteCharacter($event)"></dbz-list>
   </div>
   <div class="col">
     <!-- el dbz-add-character emite un character con el emmiter onNewCharacter, y el metodo del mainpage llamado OnNewCharacter recibe el evento ($event) que seria el emitter de onNewCharacter -->
-    <dbz-add-character (onNewCharacter)="dbzService.OnNewCharacter($event)"></dbz-add-character>
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
   </div>
 
 </div>

@@ -26,7 +26,7 @@ export class DbzService {
     power:7500
   }];
 
-  OnNewCharacter(character:Character):void{
+  addCharacter(character:Character):void{
     const newCharacter: Character = {...character,id: uuid()}
 
     this.characters.push(newCharacter);
@@ -34,8 +34,8 @@ export class DbzService {
     console.log(newCharacter)
   }
 
-  onDeleteCharacter(index:number):void{
+  deleteCharacterById(id:string):void{
     //TODO EMITIR EL IDE DEL PERSONAJE
-    this.characters.splice(index,1);
+    this.characters = this.characters.filter(character => character.id !== id);
   }
 }
